@@ -3,41 +3,50 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>NetworkPlus — فروشگاه قطعات کامپیوتر</title>
+<title>NetworkPlus — فروشگاه قطعات کامپیوتر سبک ROG</title>
 <style>
-:root{--bg:#0f0f12;--card:#111217;--muted:#a8a8a8;--accent:#00b4ff}
-*{box-sizing:border-box}
-body{margin:0;font-family:IRANSans, Arial, system-ui;direction:rtl;background:var(--bg);color:#eaeaea;transition:0.4s}
-header{position:sticky;top:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:18px 30px;background:linear-gradient(180deg,rgba(255,255,255,0.02),transparent)}
-.logo{font-weight:700;letter-spacing:1px}
-nav{display:flex;gap:18px;align-items:center}
-nav a{color:var(--muted);text-decoration:none;padding:8px 12px;border-radius:8px}
-nav a:hover{color:#fff;background:rgba(255,255,255,0.03)}
-.hero{display:flex;gap:40px;align-items:center;padding:80px 6%;background:linear-gradient(90deg, rgba(0,0,0,0.4), rgba(0,0,0,0.25)), url('https://images.unsplash.com/photo-1517336714731-489689fd1ca8?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat;transition:0.5s}
-.hero .left{max-width:560px;animation:slideLeft 1s ease-out}
-.hero h1{font-size:38px;margin:0 0 12px;color:#fff}
-.hero p{margin:0 0 20px;color:var(--muted)}
-.cta{display:inline-flex;gap:12px}
-.btn{background:var(--accent);color:#001;padding:12px 18px;border-radius:10px;text-decoration:none;font-weight:600;transition:0.3s}
-.btn:hover{transform:translateY(-3px);box-shadow:0 6px 20px rgba(0,180,255,0.5)}
-.ghost{background:transparent;border:1px solid rgba(255,255,255,0.06);color:var(--muted);padding:12px 18px;border-radius:10px;transition:0.3s}
-.ghost:hover{background:rgba(255,255,255,0.05);color:#fff}
-.categories{padding:40px 6%;display:flex;gap:18px;overflow:auto}
-.cat{min-width:160px;background:linear-gradient(180deg,rgba(255,255,255,0.02),transparent);padding:18px;border-radius:12px;text-align:center;transition:0.3s;cursor:pointer}
-.cat:hover{transform:translateY(-5px);box-shadow:0 6px 20px rgba(0,0,0,0.5)}
-.cat img{width:100%;height:100px;object-fit:cover;border-radius:8px;margin-bottom:10px}
-.cat p{margin:0;color:var(--muted);font-weight:600}
-.products{padding:40px 6%;}
-.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:20px}
-.card{background:linear-gradient(180deg,rgba(255,255,255,0.02),transparent);padding:16px;border-radius:12px;transition:transform .3s,box-shadow .3s;cursor:pointer}
-.card:hover{transform:translateY(-6px);box-shadow:0 10px 30px rgba(0,0,0,0.6)}
-.card img{width:100%;height:140px;object-fit:cover;border-radius:8px}
-.card h4{margin:12px 0 6px;font-size:16px}
-.price{font-weight:700;color:var(--accent)}
-.meta{color:var(--muted);font-size:13px}
-footer{padding:30px 6%;color:var(--muted);border-top:1px solid rgba(255,255,255,0.03)}
-@media(max-width:900px){.hero{flex-direction:column;text-align:center;padding:40px 6%}.hero .left{max-width:100%}}
+:root {
+  --bg: #0a0a0a;
+  --card: #1c1c1c;
+  --muted: #aaa;
+  --accent: #ff1f1f;
+  --glow: rgba(255,31,31,0.6);
+}
+* { box-sizing: border-box; }
+body { margin:0; font-family: IRANSans, Arial; direction: rtl; background: var(--bg); color: #eaeaea; }
+header { position: sticky; top:0; display:flex; justify-content: space-between; align-items:center; padding:20px 40px; background: linear-gradient(180deg, rgba(0,0,0,0.8), transparent); z-index: 100; }
+.logo { font-weight: 800; font-size: 24px; letter-spacing: 2px; color: var(--accent); text-shadow: 0 0 8px var(--accent); }
+nav a { color: var(--muted); text-decoration:none; margin:0 12px; padding:8px 12px; border-radius:6px; transition:0.3s; }
+nav a:hover { color:#fff; background: rgba(255,31,31,0.2); }
+.hero { position: relative; display:flex; flex-wrap:wrap; align-items:center; justify-content: space-between; padding:100px 6%; background: url('https://i.ibb.co/6XwS4kz/rog-bg.jpg') center/cover no-repeat; overflow:hidden; }
+.hero::before { content:''; position:absolute; inset:0; background: linear-gradient(90deg, rgba(0,0,0,0.7), rgba(0,0,0,0.4)); }
+.hero .left { position: relative; max-width:600px; z-index:1; animation: slideLeft 1s ease-out; }
+.hero h1 { font-size:42px; margin:0 0 16px; color:#fff; text-shadow: 0 0 12px var(--accent); }
+.hero p { font-size:18px; color: var(--muted); margin:0 0 20px; }
+.cta { display:flex; gap:14px; }
+.btn { background: var(--accent); color:#fff; padding:14px 24px; border-radius:12px; font-weight:700; text-decoration:none; transition:0.3s; box-shadow:0 0 10px var(--glow); }
+.btn:hover { transform:translateY(-3px); box-shadow:0 0 20px var(--glow); }
+.ghost { background:transparent; border:1px solid var(--glow); color: var(--muted); padding:14px 24px; border-radius:12px; transition:0.3s; }
+.ghost:hover { color:#fff; box-shadow:0 0 12px var(--glow); }
+.categories { padding:60px 6%; display:flex; gap:20px; overflow-x:auto; }
+.cat { min-width:180px; background: var(--card); padding:20px; border-radius:14px; text-align:center; transition:0.3s; cursor:pointer; box-shadow:0 0 8px rgba(255,0,0,0.2); }
+.cat:hover { transform: translateY(-6px); box-shadow:0 0 20px var(--glow); }
+.cat img { width:100%; height:120px; object-fit:cover; border-radius:10px; margin-bottom:12px; }
+.cat p { margin:0; color:var(--muted); font-weight:600; }
+.products { padding:60px 6%; }
+.grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(240px,1fr)); gap:24px; }
+.card { background: var(--card); border-radius:14px; padding:16px; transition: transform 0.3s, box-shadow 0.3s; cursor:pointer; box-shadow:0 0 6px rgba(255,0,0,0.1); position:relative; overflow:hidden; }
+.card:hover { transform: translateY(-8px); box-shadow:0 0 20px var(--glow); }
+.card img { width:100%; height:150px; object-fit:cover; border-radius:10px; margin-bottom:12px; transition: transform 0.5s; }
+.card:hover img { transform: scale(1.05); }
+.card h4 { margin:8px 0 6px; font-size:18px; }
+.price { font-weight:700; color: var(--accent); font-size:16px; }
+.meta { color: var(--muted); font-size:13px; }
+footer { padding:40px 6%; text-align:center; color:var(--muted); border-top:1px solid rgba(255,31,31,0.2); }
+@media(max-width:900px){.hero{flex-direction:column;text-align:center;padding:60px 6%}.hero .left{max-width:100%}}
 @keyframes slideLeft{from{opacity:0;transform:translateX(-30px)}to{opacity:1;transform:translateX(0)}}
+.glow-animation {position:absolute;top:0;left:0;width:100%;height:100%;background:radial-gradient(circle, rgba(255,31,31,0.2) 0%, transparent 70%); animation: pulse 2s infinite; pointer-events:none;}
+@keyframes pulse {0%,100%{transform:scale(1)}50%{transform:scale(1.2)}}
 </style>
 </head>
 <body>
@@ -51,17 +60,36 @@ footer{padding:30px 6%;color:var(--muted);border-top:1px solid rgba(255,255,255,
 </nav>
 </header>
 <section class="hero">
+<div class="glow-animation"></div>
 <div class="left">
-<h1>قطعات حرفه‌ای کامپیوتر — مخصوص گیمرها و حرفه‌ای‌ها</h1>
-<p>پردازنده، کارت گرافیک، مادربورد، رم و تمام قطعات سیستم‌های گیمینگ و ورک‌استیشن با ارسال سریع.</p>
+<h1>قطعات حرفه‌ای کامپیوتر — سبک ROG</h1>
+<p>پردازنده، کارت گرافیک، مادربورد و رم با کیفیت و طراحی الهام گرفته از ROG ایسوس.</p>
 <div class="cta">
 <a class="btn" href="#products">مشاهده محصولات</a>
 <a class="ghost" href="#contact">درخواست مشاوره</a>
 </div>
 </div>
-<div class="right" style="min-width:320px;max-width:480px">
-<img src="https://images.unsplash.com/photo-1541807084-5c52b6b6a9d1?auto=format&fit=crop&w=800&q=80" style="width:100%;border-radius:12px;box-shadow:0 8px 30px rgba(0,0,0,0.6)"/>
+</section>
+<section id="categories" class="categories">
+<div class="cat"><img src="https://i.ibb.co/0BGX5P5/cpu.jpg"/><p>پردازنده (CPU)</p></div>
+<div class="cat"><img src="https://i.ibb.co/yf0VhxB/gpu.jpg"/><p>کارت گرافیک (GPU)</p></div>
+<div class="cat"><img src="https://i.ibb.co/3F9pF1R/motherboard.jpg"/><p>مادربورد</p></div>
+<div class="cat"><img src="https://i.ibb.co/vzsk7Yw/ram.jpg"/><p>رم (RAM)</p></div>
+<div class="cat"><img src="https://i.ibb.co/Tr8mRrS/ssd.jpg"/><p>ذخیره‌سازی (SSD/HDD)</p></div>
+</section>
+<section id="products" class="products">
+<h2 style="margin:0 0 18px;color:#fff;text-shadow:0 0 10px var(--glow);">پیشنهادهای ویژه</h2>
+<div class="grid">
+<div class="card"><img src="https://i.ibb.co/yf0VhxB/gpu.jpg"/><h4>کارت گرافیک RTX 4080</h4><div class="meta">برند: FastGPU • موجود در تهران</div><div class="price">₩ 45,000,000</div></div>
+<div class="card"><img src="https://i.ibb.co/0BGX5P5/cpu.jpg"/><h4>پردازنده Core i9 نسل 13</h4><div class="meta">برند: MegaCore • موجود</div><div class="price">₩ 18,500,000</div></div>
+<div class="card"><img src="https://i.ibb.co/Tr8mRrS/ssd.jpg"/><h4>حافظه SSD NVMe 1TB</h4><div class="meta">برند: QuickStore • سرعت 3500MB/s</div><div class="price">₩ 3,200,000</div></div>
+<div class="card"><img src="https://i.ibb.co/3F9pF1R/motherboard.jpg"/><h4>مادربورد Gaming X570</h4><div class="meta">سازگار با AMD • RGB</div><div class="price">₩ 5,900,000</div></div>
+<div class="card"><img src="https://i.ibb.co/1L2hJvH/rog-pc-2.jpg"/><h4>کیس Gaming ROG</h4><div class="meta">نورپردازی RGB • گیمینگ حرفه‌ای</div><div class="price">₩ 12,500,000</div></div>
+<div class="card"><img src="https://i.ibb.co/6XbR3GZ/rog-pc-3.jpg"/><h4>مانیتور 27 اینچ ROG</h4><div class="meta">رزولوشن 1440p • 165Hz</div><div class="price">₩ 9,800,000</div></div>
 </div>
 </section>
+<footer>
+NetworkPlus — فروش قطعات کامپیوتر • ایمیل: info@networkplus.local
+</footer>
 </body>
 </html>
