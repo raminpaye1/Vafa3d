@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NetworkPlus — فروشگاه قطعات کامپیوتر</title>
+<style>
+:root{--bg:#0f0f12;--card:#111217;--muted:#a8a8a8;--accent:#00b4ff}
+*{box-sizing:border-box}
+body{margin:0;font-family:IRANSans, Arial, system-ui;direction:rtl;background:var(--bg);color:#eaeaea;transition:0.4s}
+header{position:sticky;top:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:18px 30px;background:linear-gradient(180deg,rgba(255,255,255,0.02),transparent)}
+.logo{font-weight:700;letter-spacing:1px}
+nav{display:flex;gap:18px;align-items:center}
+nav a{color:var(--muted);text-decoration:none;padding:8px 12px;border-radius:8px}
+nav a:hover{color:#fff;background:rgba(255,255,255,0.03)}
+.hero{display:flex;gap:40px;align-items:center;padding:80px 6%;background:linear-gradient(90deg, rgba(0,0,0,0.4), rgba(0,0,0,0.25)), url('https://images.unsplash.com/photo-1517336714731-489689fd1ca8?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat;transition:0.5s}
+.hero .left{max-width:560px;animation:slideLeft 1s ease-out}
+.hero h1{font-size:38px;margin:0 0 12px;color:#fff}
+.hero p{margin:0 0 20px;color:var(--muted)}
+.cta{display:inline-flex;gap:12px}
+.btn{background:var(--accent);color:#001;padding:12px 18px;border-radius:10px;text-decoration:none;font-weight:600;transition:0.3s}
+.btn:hover{transform:translateY(-3px);box-shadow:0 6px 20px rgba(0,180,255,0.5)}
+.ghost{background:transparent;border:1px solid rgba(255,255,255,0.06);color:var(--muted);padding:12px 18px;border-radius:10px;transition:0.3s}
+.ghost:hover{background:rgba(255,255,255,0.05);color:#fff}
+.categories{padding:40px 6%;display:flex;gap:18px;overflow:auto}
+.cat{min-width:160px;background:linear-gradient(180deg,rgba(255,255,255,0.02),transparent);padding:18px;border-radius:12px;text-align:center;transition:0.3s;cursor:pointer}
+.cat:hover{transform:translateY(-5px);box-shadow:0 6px 20px rgba(0,0,0,0.5)}
+.cat img{width:100%;height:100px;object-fit:cover;border-radius:8px;margin-bottom:10px}
+.cat p{margin:0;color:var(--muted);font-weight:600}
+.products{padding:40px 6%;}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:20px}
+.card{background:linear-gradient(180deg,rgba(255,255,255,0.02),transparent);padding:16px;border-radius:12px;transition:transform .3s,box-shadow .3s;cursor:pointer}
+.card:hover{transform:translateY(-6px);box-shadow:0 10px 30px rgba(0,0,0,0.6)}
+.card img{width:100%;height:140px;object-fit:cover;border-radius:8px}
+.card h4{margin:12px 0 6px;font-size:16px}
+.price{font-weight:700;color:var(--accent)}
+.meta{color:var(--muted);font-size:13px}
+footer{padding:30px 6%;color:var(--muted);border-top:1px solid rgba(255,255,255,0.03)}
+@media(max-width:900px){.hero{flex-direction:column;text-align:center;padding:40px 6%}.hero .left{max-width:100%}}
+@keyframes slideLeft{from{opacity:0;transform:translateX(-30px)}to{opacity:1;transform:translateX(0)}}
+</style>
+</head>
+<body>
+<header>
+<div class="logo">NetworkPlus</div>
+<nav>
+<a href="#categories">دسته‌بندی‌ها</a>
+<a href="#products">محصولات</a>
+<a href="#support">پشتیبانی</a>
+<a href="#contact">تماس</a>
+</nav>
+</header>
+<section class="hero">
+<div class="left">
+<h1>قطعات حرفه‌ای کامپیوتر — مخصوص گیمرها و حرفه‌ای‌ها</h1>
+<p>پردازنده، کارت گرافیک، مادربورد، رم و تمام قطعات سیستم‌های گیمینگ و ورک‌استیشن با ارسال سریع.</p>
+<div class="cta">
+<a class="btn" href="#products">مشاهده محصولات</a>
+<a class="ghost" href="#contact">درخواست مشاوره</a>
+</div>
+</div>
+<div class="right" style="min-width:320px;max-width:480px">
+<img src="https://images.unsplash.com/photo-1541807084-5c52b6b6a9d1?auto=format&fit=crop&w=800&q=80" style="width:100%;border-radius:12px;box-shadow:0 8px 30px rgba(0,0,0,0.6)"/>
+</div>
+</section>
+</body>
+</html>
